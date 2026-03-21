@@ -1,0 +1,7 @@
+---
+- name: Copy content updates from Obsidian vault
+  ansible.builtin.copy:
+    src: "{{ obsidian_vault }}"
+    dest: "{{ hugo_site_content }}"
+    remote_src: false
+    mode: "0755"
